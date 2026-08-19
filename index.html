@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АИ Сервис — Доработка и восстановление коммерческой техники</title>
+<meta name="description" content="АИ Сервис — доработка, ремонт и восстановление коммерческой техники в Нижнем Новгороде. Холодильное оборудование, пневмоподвески, сигнализации, тахографы, гидроборта и многое другое.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          orange: { DEFAULT: '#f7a325' }
+        }
+      }
+    }
+  }
+</script>
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container-x flex flex-wrap items-center justify-between gap-2 py-2">
+    <p class="m-0">Цены на сайте носят ознакомительный характер. Точную стоимость уточняйте по телефону: <a href="tel:88312671111" class="font-semibold">8&nbsp;(831)&nbsp;267-11-11</a></p>
+    <div class="flex items-center gap-4">
+      <a href="#" class="hidden sm:inline-flex items-center gap-1"><i class='bx bx-map'></i> г. Нижний Новгород, ул. Вторчермета лит5П</a>
+      <div class="flex items-center gap-2">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container-x flex flex-wrap items-center gap-5 py-4">
+    <a href="index.html" class="shrink-0">
+      <img src="assets/img/logo.png" alt="АИ Сервис" class="h-12 w-auto">
+    </a>
+
+    <div class="search-box flex items-center flex-1 min-w-[180px] px-4 py-2.5 order-3 md:order-2">
+      <input id="searchInput" type="text" placeholder="Найти услугу..." class="flex-1 text-sm">
+      <button class="text-orange text-lg"><i class='bx bx-search'></i></button>
+    </div>
+
+    <div class="flex items-center gap-5 order-2 md:order-3 ml-auto">
+      <div class="hidden lg:block text-right">
+        <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+        <a href="mailto:zakaz@ai-service52.ru" class="block text-xs text-[color:var(--text-3)]">zakaz@ai-service52.ru</a>
+      </div>
+      <button id="openCallback" class="btn-orange px-5 py-2.5 text-sm">Заказать звонок</button>
+      <button id="burgerBtn" class="lg:hidden text-2xl"><i class='bx bx-menu'></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN NAV -->
+<nav class="main-nav hidden lg:block">
+  <div class="container-x">
+    <div class="flex items-center gap-x-7 flex-wrap">
+      <a href="#" class="nav-link">Замена КАБИН</a>
+      <a href="#" class="nav-link">Ремонт после ДТП</a>
+      <a href="#" class="nav-link">Кабины / Кузова / Рамы</a>
+      <a href="#" class="nav-link">Ремонт и усиление РАМ</a>
+      <a href="#categories" class="nav-link">Холодильное оборудование</a>
+      <a href="#" class="nav-link">Сигнализации</a>
+      <a href="#" class="nav-link">Пневмоподвески</a>
+      <a href="#" class="nav-link">Тахограф / Глонасс</a>
+      <a href="#" class="nav-link">Гидроборт</a>
+      <a href="#" class="nav-link">Топливные баки</a>
+      <a href="#" class="nav-link">Автономные печки</a>
+      <a href="#" class="nav-link">Обтекатели</a>
+      <a href="#" class="nav-link">ДУТ</a>
+      <a href="#" class="nav-link">ПРОЧЕЕ</a>
+      <a href="#" class="nav-link">Отзывы на сервис</a>
+      <a href="#about" class="nav-link">О компании</a>
+      <a href="#contacts" class="nav-link">Контактная информация</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="lg:hidden hidden">
+  <a href="#">Замена КАБИН</a>
+  <a href="#">Ремонт после ДТП</a>
+  <a href="#categories">Холодильное оборудование</a>
+  <a href="#">Сигнализации</a>
+  <a href="#">Пневмоподвески</a>
+  <a href="#">Тахограф / Глонасс</a>
+  <a href="#about">О компании</a>
+  <a href="#contacts">Контактная информация</a>
+</div>
+
+<!-- TELEGRAM PROMO -->
+<section class="pt-10 pb-4">
+  <div class="container-x">
+    <div class="telegram-promo p-8 sm:p-10">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div class="flex-1 text-center lg:text-left">
+          <h2 class="tg-title">ПОДПИШИСЬ НА НАШ <span class="tg-title-accent">TELEGRAM<i class='bx bxl-telegram tg-icon'></i></span></h2>
+          <ul class="tg-list mt-5 space-y-2 inline-block lg:block text-left">
+            <li><i class='bx bx-chevron-right'></i> Вся жизнь нашего сервиса</li>
+            <li><i class='bx bx-chevron-right'></i> Множество полезной информации</li>
+            <li><i class='bx bx-chevron-right'></i> Результаты восстановления битых автомобилей</li>
+          </ul>
+          <a href="https://t.me/gazel_gazon" target="_blank" class="btn-orange inline-flex items-center gap-2 px-7 py-3 text-sm mt-7">Перейти в наш ТГ канал <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+        <div class="tg-qr shrink-0 text-center">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=170x170&bgcolor=ffffff&data=https%3A%2F%2Ft.me%2Fgazel_gazon" alt="QR-код Telegram канала" class="rounded-xl block">
+          <p class="mt-3 font-bold text-sm tracking-wide">@GAZEL_GAZON</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="py-16">
+  <div class="container-x">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Наши направления</h2>
+      <a href="#" class="text-orange text-sm font-semibold hidden sm:block">Все услуги <i class='bx bx-right-arrow-alt'></i></a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-prochee.jpg" alt="Прочее">
+      </a>
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-remont-dtp.png" alt="Ремонт после ДТП">
+      </a>
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-kabiny.png" alt="Кабины / Кузова / Рамы">
+      </a>
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-usilenie-ramy.png" alt="Усиление рамы">
+      </a>
+
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-holod.png" alt="Холодильное оборудование">
+      </a>
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-signal.png" alt="Сигнализации">
+      </a>
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-pnevmo.png" alt="Пневмоподвески">
+      </a>
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-tahograf.png" alt="Тахограф / Глонасс">
+      </a>
+
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-gidroport.jpg" alt="Гидроборт">
+      </a>
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-toplivo.png" alt="Топливные баки">
+      </a>
+      <a href="#" class="cat-card">
+        <img src="assets/img/cat-otopiteli.png" alt="Автономные отопители">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="py-4 pb-16">
+  <div class="container-x">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Обзоры / Новости</h2>
+      <a href="#" class="text-orange text-sm font-semibold">Смотреть все <i class='bx bx-right-arrow-alt'></i></a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="#" class="news-card">
+        <img src="assets/img/news-1.jpg" alt="Новость">
+        <div class="p-5">
+          <p class="news-date mb-2">11/08/2026</p>
+          <p class="news-title">Невидимый враг: как оценить скрытые повреждения авто после ДТП</p>
+        </div>
+      </a>
+      <a href="#" class="news-card">
+        <img src="assets/img/news-2.jpg" alt="Новость">
+        <div class="p-5">
+          <p class="news-date mb-2">11/08/2026</p>
+          <p class="news-title">Как вернуть автомобилю перевозданный вид после ДТП: этапы ремонта</p>
+        </div>
+      </a>
+      <a href="#" class="news-card">
+        <img src="assets/img/news-3.jpg" alt="Новость">
+        <div class="p-5">
+          <p class="news-date mb-2">11/08/2026</p>
+          <p class="news-title">Независимая оценка ремонта после ДТП: как получить максимум от страховой</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-16 border-t border-[color:var(--line)]">
+  <div class="container-x grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-5">О компании</h2>
+      <p class="text-[color:var(--text-2)] mb-3">Мы — компания «АИ Сервис»! С 2017 года являемся надёжным партнёром для вашего бизнеса. Основные сферы деятельности компании — доработка и восстановление коммерческой техники: ГАЗ, ГАЗель, ГАЗон, Соболь, Вальдай, Садко, УАЗ, КамАЗ и т.д.</p>
+      <p class="text-[color:var(--text-2)] mb-6">Восстанавливаем автомобили после ДТП, пожаров и т.д. Меняем кузова и кабины на новые с оформлением полного пакета документов. Наши специалисты проведут консультацию, ответят на вопросы об оборудовании, стоимости и условиях, а также предоставят гарантию качества на продукцию.</p>
+
+      <div class="grid sm:grid-cols-2 gap-x-6 gap-y-4">
+        <div class="about-check"><i class='bx bx-check-circle'></i> Рефрижераторы и кондиционеры</div>
+        <div class="about-check"><i class='bx bx-check-circle'></i> Гидроборта</div>
+        <div class="about-check"><i class='bx bx-check-circle'></i> Топливные баки</div>
+        <div class="about-check"><i class='bx bx-check-circle'></i> Видеонаблюдение</div>
+        <div class="about-check"><i class='bx bx-check-circle'></i> Пневмоподвески</div>
+        <div class="about-check"><i class='bx bx-check-circle'></i> Сигнализации</div>
+        <div class="about-check"><i class='bx bx-check-circle'></i> Тахография и мониторинг</div>
+        <div class="about-check"><i class='bx bx-check-circle'></i> Автономные печки</div>
+        <div class="about-check"><i class='bx bx-check-circle'></i> Обтекатели</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="py-16 border-t border-[color:var(--line)]">
+  <div class="container-x">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-8">Наши партнёры</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div class="partner-card">
+        <div class="flex items-center gap-3">
+          <svg width="34" height="34" viewBox="0 0 34 34" class="shrink-0">
+            <polygon points="5,30 15,4 25,4 15,30" fill="#e2231a"/>
+            <polygon points="15,30 25,4 29,4 19,30" fill="#e2231a" opacity=".55"/>
+          </svg>
+          <div class="text-left leading-none">
+            <p class="partner-tag">Пневмоподвеска</p>
+            <p class="partner-word">ARIDE</p>
+          </div>
+        </div>
+      </div>
+      <div class="partner-card">
+        <p class="partner-word tracking-wide">
+          <span style="color:#f15a29;">THERMO</span><span style="color:#6a3aa8;">TRANS</span>
+        </p>
+      </div>
+      <div class="partner-card flex-col gap-1">
+        <p class="partner-word italic" style="color:#1b3fa0;">StarLine</p>
+        <p class="partner-tag flex items-center gap-1" style="color:#e2231a;">
+          НАДЁЖНО ЗАЩИЩАЕТ
+          <i class='bx bxs-lock-alt'></i><i class='bx bxs-lock-alt'></i><i class='bx bxs-lock-alt'></i>
+        </p>
+      </div>
+      <div class="partner-card"><img src="assets/img/partner-elinje.png" alt="Элинж"></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN CTA -->
+<section class="pb-16">
+  <div class="container-x">
+    <div class="join-cta p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-xl sm:text-2xl font-bold mb-2">Присоединяйтесь!</h3>
+        <p class="text-[color:var(--text-2)]">Вступайте к нам в группу и узнавайте первыми об акциях и новых предложениях!</p>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico" style="width:44px;height:44px;font-size:20px;"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico" style="width:44px;height:44px;font-size:20px;"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico" style="width:44px;height:44px;font-size:20px;"><i class='bx bxl-telegram'></i></a>
+        <a href="#" class="social-ico" style="width:44px;height:44px;font-size:20px;"><i class='bx bx-shield-alt-2'></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacts" class="site-footer pt-14 pb-6">
+  <div class="container-x grid sm:grid-cols-3 gap-10 pb-10">
+    <div>
+      <h4>АИ Сервис</h4>
+      <ul class="space-y-2">
+        <li><a href="#about">О компании</a></li>
+        <li><a href="#contacts">Контактная информация</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Согласие на обработку персональных данных</a></li>
+        <li><a href="#">Карта сайта</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2"><i class='bx bx-map mt-0.5'></i> г. Нижний Новгород, ул. Вторчермета Лит5П</li>
+        <li class="flex items-start gap-2"><i class='bx bx-phone mt-0.5'></i> <a href="tel:88312671111">8&nbsp;(831)&nbsp;267-11-11</a> (звонок бесплатный)</li>
+        <li class="flex items-start gap-2"><i class='bx bx-envelope mt-0.5'></i> <a href="mailto:zakaz@ai-service52.ru">zakaz@ai-service52.ru</a></li>
+        <li class="flex items-start gap-2"><i class='bx bx-time-five mt-0.5'></i> Пн-Пт 9.00 - 18.00</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Мы в сети</h4>
+      <div class="flex items-center gap-3">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+      <button id="openCallback3" class="btn-orange px-5 py-2.5 text-sm mt-6">Заказать обратный звонок</button>
+    </div>
+  </div>
+  <div class="container-x border-t border-[color:var(--line)] pt-5 text-xs">
+    © 2017–2026 АИ Сервис. Все права защищены.
+  </div>
+</footer>
+
+<!-- CALLBACK MODAL -->
+<div id="callbackModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4" style="background:rgba(6,8,11,.72);">
+  <div class="join-cta w-full max-w-md p-7 relative">
+    <button id="closeCallback" class="absolute top-4 right-4 text-2xl text-[color:var(--text-3)] hover:text-orange"><i class='bx bx-x'></i></button>
+    <h3 class="text-xl font-bold mb-1">Заказать обратный звонок</h3>
+    <p class="text-[color:var(--text-2)] text-sm mb-5">Оставьте номер, и наш менеджер свяжется с вами в ближайшее время.</p>
+    <form id="callbackForm" class="space-y-4">
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Ваше имя</label>
+        <input type="text" name="name" class="search-box w-full px-4 py-2.5 text-sm" placeholder="Иван">
+      </div>
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Телефон *</label>
+        <input type="tel" name="phone" required class="search-box w-full px-4 py-2.5 text-sm" placeholder="+7 (___) ___-__-__">
+      </div>
+      <label class="flex items-start gap-2 text-xs text-[color:var(--text-3)]">
+        <input type="checkbox" required class="mt-1">
+        Я даю согласие на обработку моих персональных данных.
+      </label>
+      <button type="submit" class="btn-orange w-full py-3 text-sm">Отправить</button>
+    </form>
+    <p id="callbackSuccess" class="hidden text-orange text-sm mt-4 text-center">Спасибо! Мы скоро с вами свяжемся.</p>
+  </div>
+</div>
+
+<button id="scrollTop"><i class='bx bx-chevron-up text-xl'></i></button>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
