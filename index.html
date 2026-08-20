@@ -24,7 +24,7 @@
 <body class="antialiased">
 
 <!-- TOP BAR -->
-<div class="topbar">
+<div class="topbar md:block hidden">
   <div class="container-x flex flex-wrap items-center justify-between gap-2 py-2">
     <p class="m-0">Цены на сайте носят ознакомительный характер. Точную стоимость уточняйте по телефону: <a href="tel:88312671111" class="font-semibold">8&nbsp;(831)&nbsp;267-11-11</a></p>
     <div class="flex items-center gap-4">
@@ -40,17 +40,12 @@
 
 <!-- HEADER -->
 <header class="site-header">
-  <div class="container-x flex flex-wrap items-center gap-5 py-4">
+  <div class="container-x flex flex-wrap items-center gap-3 sm:gap-5 py-3 sm:py-4">
     <a href="index.html" class="shrink-0">
-      <img src="assets/img/logo.png" alt="АИ Сервис" class="h-12 w-auto">
+      <img src="assets/img/logo.png" alt="АИ Сервис" class="h-12 sm:h-10 lg:h-12 w-auto">
     </a>
 
-    <div class="search-box flex items-center flex-1 min-w-[180px] px-4 py-2.5 order-3 md:order-2">
-      <input id="searchInput" type="text" placeholder="Найти услугу..." class="flex-1 text-sm">
-      <button class="text-orange text-lg"><i class='bx bx-search'></i></button>
-    </div>
-
-    <div class="flex items-center gap-5 order-2 md:order-3 ml-auto">
+    <div class="flex items-center gap-3 order-2 lg:order-3 ml-auto">
       <div class="header-icon-pill">
         <button type="button" class="hip-btn cm-tooltip" title="Отложенные товары"><i class='bx bx-heart'></i></button>
         <button type="button" class="hip-btn cm-tooltip" title="Список сравнения"><i class='bx bx-bar-chart-alt-2'></i></button>
@@ -59,8 +54,13 @@
         <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
         <a href="mailto:zakaz@ai-service52.ru" class="block text-xs text-[color:var(--text-3)]">zakaz@ai-service52.ru</a>
       </div>
-      <button id="openCallback" class="btn-orange px-5 py-2.5 text-sm">Заказать звонок</button>
+      <button id="openCallback" class="btn-orange px-5 py-2.5 text-sm hidden lg:inline-flex">Заказать звонок</button>
       <button id="burgerBtn" class="lg:hidden text-2xl"><i class='bx bx-menu'></i></button>
+    </div>
+
+    <div class="search-box flex items-center w-full lg:flex-1 lg:min-w-[180px] lg:w-auto px-4 py-2.5 order-3">
+      <input id="searchInput" type="text" placeholder="Найти услугу..." class="flex-1 text-sm">
+      <button class="text-orange text-lg"><i class='bx bx-search'></i></button>
     </div>
   </div>
 </header>
@@ -104,6 +104,11 @@
 
 <!-- MOBILE MENU -->
 <div id="mobileMenu" class="lg:hidden hidden">
+  <div class="px-[18px] py-4 border-b" style="border-color:var(--line);">
+    <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+    <a href="mailto:zakaz@ai-service52.ru" class="block text-xs mt-1" style="color:var(--text-3);">zakaz@ai-service52.ru</a>
+    <button id="openCallbackMobile" class="btn-orange w-full px-5 py-2.5 text-sm mt-3">Заказать звонок</button>
+  </div>
   <a href="#">Замена КАБИН</a>
   <a href="#">Ремонт после ДТП</a>
   <a href="#categories">Холодильное оборудование</a>

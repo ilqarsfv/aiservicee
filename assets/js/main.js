@@ -15,7 +15,7 @@ $(function () {
     $('body').css('overflow', '');
   }
 
-  $('#openCallback, #openCallback2, #openCallback3').on('click', openModal);
+  $('#openCallback, #openCallback2, #openCallback3, #openCallbackMobile').on('click', openModal);
   $('#closeCallback').on('click', closeModal);
   $('#callbackModal').on('click', function (e) {
     if (e.target === this) closeModal();
