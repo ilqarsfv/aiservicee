@@ -51,6 +51,10 @@
     </div>
 
     <div class="flex items-center gap-5 order-2 md:order-3 ml-auto">
+      <div class="header-icon-pill">
+        <button type="button" class="hip-btn cm-tooltip" title="Отложенные товары"><i class='bx bx-heart'></i></button>
+        <button type="button" class="hip-btn cm-tooltip" title="Список сравнения"><i class='bx bx-bar-chart-alt-2'></i></button>
+      </div>
       <div class="hidden lg:block text-right">
         <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
         <a href="mailto:zakaz@ai-service52.ru" class="block text-xs text-[color:var(--text-3)]">zakaz@ai-service52.ru</a>
@@ -67,9 +71,21 @@
     <div class="flex items-center gap-x-7 flex-wrap">
       <a href="#" class="nav-link">Замена КАБИН</a>
       <a href="#" class="nav-link">Ремонт после ДТП</a>
-      <a href="#" class="nav-link">Кабины / Кузова / Рамы</a>
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-link">Кабины / Кузова / Рамы <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-link">Кабины</a>
+          <a href="#" class="nav-dropdown-link">Рамы</a>
+        </div>
+      </div>
       <a href="#" class="nav-link">Ремонт и усиление РАМ</a>
-      <a href="#categories" class="nav-link">Холодильное оборудование</a>
+      <div class="nav-item-dropdown">
+        <a href="#categories" class="nav-link">Холодильное оборудование <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="#categories" class="nav-dropdown-link">Рефрижераторы</a>
+          <a href="#categories" class="nav-dropdown-link">Климатическое оборудование</a>
+        </div>
+      </div>
       <a href="#" class="nav-link">Сигнализации</a>
       <a href="#" class="nav-link">Пневмоподвески</a>
       <a href="#" class="nav-link">Тахограф / Глонасс</a>
@@ -223,6 +239,10 @@
         <div class="about-check"><i class='bx bx-check-circle'></i> Обтекатели</div>
       </div>
     </div>
+
+    <div class="about-illustration about-illustration--photo">
+      <img src="assets/img/about_right_side_cover.png" alt="Сервисный центр АИ Сервис" class="about-photo">
+    </div>
   </div>
 </section>
 
@@ -330,9 +350,9 @@
         <label class="text-xs text-[color:var(--text-3)] block mb-1">Телефон *</label>
         <input type="tel" name="phone" required class="search-box w-full px-4 py-2.5 text-sm" placeholder="+7 (___) ___-__-__">
       </div>
-      <label class="flex items-start gap-2 text-xs text-[color:var(--text-3)]">
-        <input type="checkbox" required class="mt-1">
-        Я даю согласие на обработку моих персональных данных.
+      <label class="flex items-center gap-2.5 text-xs text-[color:var(--text-3)] leading-snug">
+        <input type="checkbox" required class="gdpr-check">
+        <span>Я даю согласие на обработку моих персональных данных.</span>
       </label>
       <button type="submit" class="btn-orange w-full py-3 text-sm">Отправить</button>
     </form>
