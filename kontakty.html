@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контактная информация — АИ Сервис</title>
+<meta name="description" content="Контактная информация компании «АИ Сервис»: адрес, телефоны, почта, режим работы и реквизиты организации в Нижнем Новгороде.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          orange: { DEFAULT: '#f7a325' }
+        }
+      }
+    }
+  }
+</script>
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+<!-- TOP BAR -->
+<div class="topbar md:block hidden">
+  <div class="container-x flex flex-wrap items-center justify-between gap-2 py-2">
+    <p class="m-0">Цены на сайте носят ознакомительный характер. Точную стоимость уточняйте по телефону: <a href="tel:88312671111" class="font-semibold">8&nbsp;(831)&nbsp;267-11-11</a></p>
+    <div class="flex items-center gap-4">
+      <a href="#" class="hidden sm:inline-flex items-center gap-1"><i class='bx bx-map'></i> г. Нижний Новгород, ул. Вторчермета лит5П</a>
+      <div class="flex items-center gap-2">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container-x flex flex-wrap items-center gap-3 sm:gap-5 py-3 sm:py-4">
+    <a href="index.html" class="shrink-0">
+      <img src="assets/img/logo.png" alt="АИ Сервис" class="h-12 sm:h-10 lg:h-12 w-auto">
+    </a>
+
+    <div class="flex items-center gap-3 order-2 lg:order-3 ml-auto">
+      <div class="header-icon-pill">
+        <button type="button" class="hip-btn cm-tooltip" title="Отложенные товары"><i class='bx bx-heart'></i></button>
+        <button type="button" class="hip-btn cm-tooltip" title="Список сравнения"><i class='bx bx-bar-chart-alt-2'></i></button>
+      </div>
+      <div class="hidden lg:block text-right">
+        <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+        <a href="mailto:zakaz@ai-service52.ru" class="block text-xs text-[color:var(--text-3)]">zakaz@ai-service52.ru</a>
+      </div>
+      <button id="openCallback" class="btn-orange px-5 py-2.5 text-sm hidden lg:inline-flex">Заказать звонок</button>
+      <button id="burgerBtn" class="lg:hidden text-2xl"><i class='bx bx-menu'></i></button>
+    </div>
+
+    <div class="search-box flex items-center w-full lg:flex-1 lg:min-w-[180px] lg:w-auto px-4 py-2.5 order-2">
+      <input id="searchInput" type="text" placeholder="Найти услугу..." class="flex-1 text-sm">
+      <button class="text-orange text-lg"><i class='bx bx-search'></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN NAV -->
+<nav class="main-nav hidden lg:block">
+  <div class="container-x">
+    <div class="flex items-center gap-x-7 flex-wrap">
+      <a href="index.html#" class="nav-link">Замена КАБИН</a>
+      <a href="index.html#" class="nav-link">Ремонт после ДТП</a>
+      <div class="nav-item-dropdown">
+        <a href="index.html#" class="nav-link">Кабины / Кузова / Рамы <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="index.html#" class="nav-dropdown-link">Кабины</a>
+          <a href="index.html#" class="nav-dropdown-link">Рамы</a>
+        </div>
+      </div>
+      <a href="index.html#" class="nav-link">Ремонт и усиление РАМ</a>
+      <div class="nav-item-dropdown">
+        <a href="index.html#categories" class="nav-link">Холодильное оборудование <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="index.html#categories" class="nav-dropdown-link">Рефрижераторы</a>
+          <a href="index.html#categories" class="nav-dropdown-link">Климатическое оборудование</a>
+        </div>
+      </div>
+      <a href="index.html#" class="nav-link">Сигнализации</a>
+      <a href="index.html#" class="nav-link">Пневмоподвески</a>
+      <a href="index.html#" class="nav-link">Тахограф / Глонасс</a>
+      <a href="index.html#" class="nav-link">Гидроборт</a>
+      <a href="toplivnye-baki.html" class="nav-link">Топливные баки</a>
+      <a href="index.html#" class="nav-link">Автономные печки</a>
+      <a href="index.html#" class="nav-link">Обтекатели</a>
+      <a href="index.html#" class="nav-link">ДУТ</a>
+      <a href="index.html#" class="nav-link">ПРОЧЕЕ</a>
+      <a href="index.html#" class="nav-link">Отзывы на сервис</a>
+      <a href="o-kompanii.html" class="nav-link">О компании</a>
+      <a href="kontakty.html" class="nav-link" style="color:var(--orange);">Контактная информация</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="lg:hidden hidden">
+  <div class="px-[18px] py-4 border-b" style="border-color:var(--line);">
+    <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+    <a href="mailto:zakaz@ai-service52.ru" class="block text-xs mt-1" style="color:var(--text-3);">zakaz@ai-service52.ru</a>
+    <button id="openCallbackMobile" class="btn-orange w-full px-5 py-2.5 text-sm mt-3">Заказать звонок</button>
+  </div>
+  <a href="index.html#">Замена КАБИН</a>
+  <a href="index.html#">Ремонт после ДТП</a>
+  <a href="index.html#categories">Холодильное оборудование</a>
+  <a href="index.html#">Сигнализации</a>
+  <a href="index.html#">Пневмоподвески</a>
+  <a href="index.html#">Тахограф / Глонасс</a>
+  <a href="toplivnye-baki.html">Топливные баки</a>
+  <a href="o-kompanii.html">О компании</a>
+  <a href="kontakty.html" style="color:var(--orange);">Контактная информация</a>
+</div>
+
+<!-- PAGE HERO / BREADCRUMB -->
+<section class="page-hero py-6">
+  <div class="container-x">
+    <h1 class="text-2xl sm:text-3xl font-bold mb-2">Контактная информация</h1>
+    <p class="breadcrumb"><a href="index.html">Главная</a> <i class='bx bx-chevron-right'></i> Контактная информация</p>
+  </div>
+</section>
+
+<!-- CONTACT CARDS -->
+<section class="py-10 sm:py-14">
+  <div class="container-x">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+      <div class="info-card">
+        <i class='bx bx-map mb-2'></i>
+        <h4>Адрес</h4>
+        <p class="font-normal">г. Нижний Новгород,<br>ул. Вторчермета, 1 лит5П</p>
+      </div>
+      <div class="info-card">
+        <i class='bx bx-phone mb-2'></i>
+        <h4>Телефон</h4>
+        <p><a href="tel:88312671111">8&nbsp;(831)&nbsp;267-11-11</a></p>
+        <p class="text-xs font-normal text-[color:var(--text-3)] mt-1">Звонок бесплатный</p>
+      </div>
+      <div class="info-card">
+        <i class='bx bx-envelope mb-2'></i>
+        <h4>Почта</h4>
+        <p><a href="mailto:zakaz@ai-service52.ru">zakaz@ai-service52.ru</a></p>
+      </div>
+      <div class="info-card">
+        <i class='bx bx-time-five mb-2'></i>
+        <h4>Режим работы</h4>
+        <p class="font-normal">Пн–Пт 9.00 – 18.00</p>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 mb-10">
+      <div class="info-card">
+        <i class='bx bx-cog mb-2'></i>
+        <h4>АИ Сервис (участок доп. оборудования)</h4>
+        <p><a href="tel:88312671111">8&nbsp;(831)&nbsp;267-11-11</a></p>
+      </div>
+      <div class="info-card">
+        <i class='bx bx-briefcase mb-2'></i>
+        <h4>Бухгалтерия</h4>
+        <p><a href="mailto:bux@autoistoriya.ru">bux@autoistoriya.ru</a></p>
+      </div>
+    </div>
+
+    <div class="img-placeholder mb-10" style="min-height:340px;">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad59dbf19fdc1cf4c7b6a7c46c7801062ea5b98f2e2c46c3bd7949b536839d3e3&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
+    </div>
+
+    <!-- REQUISITES -->
+    <div class="info-card">
+      <h4 class="mb-4 text-base">Реквизиты организации</h4>
+      <div class="overflow-x-auto">
+        <table class="req-table">
+          <tr><td>Полное наименование</td><td>Общество с Ограниченной Ответственностью «АИ Сервис»</td></tr>
+          <tr><td>Сокращённое название</td><td>ООО «АИ Сервис»</td></tr>
+          <tr><td>Юридический адрес</td><td>603141, г. Нижний Новгород, ул. Геологов, дом 9А, литер Б</td></tr>
+          <tr><td>Фактический и почтовый адрес</td><td>603141, г. Нижний Новгород, ул. Геологов, дом 9А, литер Б</td></tr>
+          <tr><td>ИНН / КПП</td><td>5261117027 / 526101001</td></tr>
+          <tr><td>ОГРН</td><td>1185275028520</td></tr>
+          <tr><td>Расчётный счёт</td><td>40702810723000030273</td></tr>
+          <tr><td>Банк</td><td>Поволжский филиал АО «Райффайзенбанк»</td></tr>
+          <tr><td>БИК</td><td>042202847</td></tr>
+          <tr><td>Корр. счёт</td><td>30101810300000000847</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacts" class="site-footer pt-14 pb-6">
+  <div class="container-x grid sm:grid-cols-3 gap-10 pb-10">
+    <div>
+      <h4>АИ Сервис</h4>
+      <ul class="space-y-2">
+        <li><a href="o-kompanii.html">О компании</a></li>
+        <li><a href="kontakty.html">Контактная информация</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Согласие на обработку персональных данных</a></li>
+        <li><a href="#">Карта сайта</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2"><i class='bx bx-map mt-0.5'></i> г. Нижний Новгород, ул. Вторчермета Лит5П</li>
+        <li class="flex items-start gap-2"><i class='bx bx-phone mt-0.5'></i> <a href="tel:88312671111">8&nbsp;(831)&nbsp;267-11-11</a> (звонок бесплатный)</li>
+        <li class="flex items-start gap-2"><i class='bx bx-envelope mt-0.5'></i> <a href="mailto:zakaz@ai-service52.ru">zakaz@ai-service52.ru</a></li>
+        <li class="flex items-start gap-2"><i class='bx bx-time-five mt-0.5'></i> Пн-Пт 9.00 - 18.00</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Мы в сети</h4>
+      <div class="flex items-center gap-3">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+      <button id="openCallback3" class="btn-orange px-5 py-2.5 text-sm mt-6">Заказать обратный звонок</button>
+    </div>
+  </div>
+  <div class="container-x border-t border-[color:var(--line)] pt-5 text-xs">
+    © 2017–2026 АИ Сервис. Все права защищены.
+  </div>
+</footer>
+
+<!-- CALLBACK MODAL -->
+<div id="callbackModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4" style="background:rgba(6,8,11,.72);">
+  <div class="join-cta w-full max-w-md p-7 relative">
+    <button id="closeCallback" class="absolute top-4 right-4 text-2xl text-[color:var(--text-3)] hover:text-orange"><i class='bx bx-x'></i></button>
+    <h3 class="text-xl font-bold mb-1">Заказать обратный звонок</h3>
+    <p class="text-[color:var(--text-2)] text-sm mb-5">Оставьте номер, и наш менеджер свяжется с вами в ближайшее время.</p>
+    <form id="callbackForm" class="space-y-4">
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Ваше имя</label>
+        <input type="text" name="name" class="search-box w-full px-4 py-2.5 text-sm" placeholder="Иван">
+      </div>
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Телефон *</label>
+        <input type="tel" name="phone" required class="search-box w-full px-4 py-2.5 text-sm" placeholder="+7 (___) ___-__-__">
+      </div>
+      <label class="flex items-center gap-2.5 text-xs text-[color:var(--text-3)] leading-snug">
+        <input type="checkbox" required class="gdpr-check">
+        <span>Я даю согласие на обработку моих персональных данных.</span>
+      </label>
+      <button type="submit" class="btn-orange w-full py-3 text-sm">Отправить</button>
+    </form>
+    <p id="callbackSuccess" class="hidden text-orange text-sm mt-4 text-center">Спасибо! Мы скоро с вами свяжемся.</p>
+  </div>
+</div>
+
+<button id="scrollTop"><i class='bx bx-chevron-up text-xl'></i></button>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

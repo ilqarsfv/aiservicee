@@ -506,6 +506,49 @@ body{
   .shop-sidebar{display:none;}
 }
 
+
+
+/* Info / requisites page blocks */
+.info-card{
+  background:var(--bg-2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:22px;
+}
+.info-card i{color:var(--orange);font-size:22px;}
+.info-card h4{font-size:13px;color:var(--text-3);font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:6px;}
+.info-card p, .info-card a{font-size:14.5px;font-weight:600;color:var(--text-1);}
+
+.principle-card{
+  background:var(--bg-2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:20px;
+  transition:transform .2s ease, border-color .2s ease;
+}
+.principle-card:hover{transform:translateY(-3px);border-color:var(--orange);}
+.principle-card i{color:var(--orange);font-size:26px;margin-bottom:10px;display:block;}
+.principle-card h5{font-weight:700;font-size:14.5px;color:var(--text-1);margin-bottom:6px;}
+.principle-card p{font-size:13px;color:var(--text-2);line-height:1.5;}
+
+.brand-chip{
+  display:inline-block;
+  padding:6px 14px;
+  background:var(--bg-3);
+  border:1px solid var(--line);
+  border-radius:20px;
+  font-size:12.5px;
+  font-weight:600;
+  color:var(--text-2);
+}
+
+.req-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+.req-table tr{border-bottom:1px solid var(--line);}
+.req-table tr:last-child{border-bottom:none;}
+.req-table td{padding:11px 6px;color:var(--text-2);vertical-align:top;}
+.req-table td:first-child{color:var(--text-3);width:46%;font-size:12.5px;}
+.req-table td:last-child{color:var(--text-1);font-weight:600;}
+
 /* GDPR checkbox */
 .gdpr-check{
   width:16px;height:16px;
