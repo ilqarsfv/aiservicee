@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Топливные баки — АИ Сервис</title>
+<meta name="description" content="Топливные баки для ГАЗель НЕКСТ, ГАЗон НЕКСТ, Садко НЕКСТ и другой коммерческой техники. Алюминиевые и железные баки любого объёма от компании «АИ Сервис».">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          orange: { DEFAULT: '#f7a325' }
+        }
+      }
+    }
+  }
+</script>
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+<!-- TOP BAR -->
+<div class="topbar md:block hidden">
+  <div class="container-x flex flex-wrap items-center justify-between gap-2 py-2">
+    <p class="m-0">Цены на сайте носят ознакомительный характер. Точную стоимость уточняйте по телефону: <a href="tel:88312671111" class="font-semibold">8&nbsp;(831)&nbsp;267-11-11</a></p>
+    <div class="flex items-center gap-4">
+      <a href="#" class="hidden sm:inline-flex items-center gap-1"><i class='bx bx-map'></i> г. Нижний Новгород, ул. Вторчермета лит5П</a>
+      <div class="flex items-center gap-2">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container-x flex flex-wrap items-center gap-3 sm:gap-5 py-3 sm:py-4">
+    <a href="index.html" class="shrink-0">
+      <img src="assets/img/logo.png" alt="АИ Сервис" class="h-12 sm:h-10 lg:h-12 w-auto">
+    </a>
+
+    <div class="flex items-center gap-3 order-2 lg:order-3 ml-auto">
+      <div class="header-icon-pill">
+        <button type="button" class="hip-btn cm-tooltip" title="Отложенные товары"><i class='bx bx-heart'></i></button>
+        <button type="button" class="hip-btn cm-tooltip" title="Список сравнения"><i class='bx bx-bar-chart-alt-2'></i></button>
+      </div>
+      <div class="hidden lg:block text-right">
+        <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+        <a href="mailto:zakaz@ai-service52.ru" class="block text-xs text-[color:var(--text-3)]">zakaz@ai-service52.ru</a>
+      </div>
+      <button id="openCallback" class="btn-orange px-5 py-2.5 text-sm hidden lg:inline-flex">Заказать звонок</button>
+      <button id="burgerBtn" class="lg:hidden text-2xl"><i class='bx bx-menu'></i></button>
+    </div>
+
+    <div class="search-box flex items-center w-full lg:flex-1 lg:min-w-[180px] lg:w-auto px-4 py-2.5 order-2">
+      <input id="searchInput" type="text" placeholder="Найти услугу..." class="flex-1 text-sm">
+      <button class="text-orange text-lg"><i class='bx bx-search'></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN NAV -->
+<nav class="main-nav hidden lg:block">
+  <div class="container-x">
+    <div class="flex items-center gap-x-7 flex-wrap">
+      <a href="index.html#" class="nav-link">Замена КАБИН</a>
+      <a href="index.html#" class="nav-link">Ремонт после ДТП</a>
+      <div class="nav-item-dropdown">
+        <a href="index.html#" class="nav-link">Кабины / Кузова / Рамы <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="index.html#" class="nav-dropdown-link">Кабины</a>
+          <a href="index.html#" class="nav-dropdown-link">Рамы</a>
+        </div>
+      </div>
+      <a href="index.html#" class="nav-link">Ремонт и усиление РАМ</a>
+      <div class="nav-item-dropdown">
+        <a href="index.html#categories" class="nav-link">Холодильное оборудование <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="index.html#categories" class="nav-dropdown-link">Рефрижераторы</a>
+          <a href="index.html#categories" class="nav-dropdown-link">Климатическое оборудование</a>
+        </div>
+      </div>
+      <a href="index.html#" class="nav-link">Сигнализации</a>
+      <a href="index.html#" class="nav-link">Пневмоподвески</a>
+      <a href="index.html#" class="nav-link">Тахограф / Глонасс</a>
+      <a href="index.html#" class="nav-link">Гидроборт</a>
+      <a href="toplivnye-baki.html" class="nav-link" style="color:var(--orange);">Топливные баки</a>
+      <a href="index.html#" class="nav-link">Автономные печки</a>
+      <a href="index.html#" class="nav-link">Обтекатели</a>
+      <a href="index.html#" class="nav-link">ДУТ</a>
+      <a href="index.html#" class="nav-link">ПРОЧЕЕ</a>
+      <a href="index.html#" class="nav-link">Отзывы на сервис</a>
+      <a href="index.html#about" class="nav-link">О компании</a>
+      <a href="index.html#contacts" class="nav-link">Контактная информация</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="lg:hidden hidden">
+  <div class="px-[18px] py-4 border-b" style="border-color:var(--line);">
+    <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+    <a href="mailto:zakaz@ai-service52.ru" class="block text-xs mt-1" style="color:var(--text-3);">zakaz@ai-service52.ru</a>
+    <button id="openCallbackMobile" class="btn-orange w-full px-5 py-2.5 text-sm mt-3">Заказать звонок</button>
+  </div>
+  <a href="index.html#">Замена КАБИН</a>
+  <a href="index.html#">Ремонт после ДТП</a>
+  <a href="index.html#categories">Холодильное оборудование</a>
+  <a href="index.html#">Сигнализации</a>
+  <a href="index.html#">Пневмоподвески</a>
+  <a href="index.html#">Тахограф / Глонасс</a>
+  <a href="toplivnye-baki.html" style="color:var(--orange);">Топливные баки</a>
+  <a href="index.html#about">О компании</a>
+  <a href="index.html#contacts">Контактная информация</a>
+</div>
+
+<!-- PAGE HERO / BREADCRUMB -->
+<section class="page-hero py-6">
+  <div class="container-x">
+    <h1 class="text-2xl sm:text-3xl font-bold mb-2">Топливные баки</h1>
+    <p class="breadcrumb"><a href="index.html">Главная</a> <i class='bx bx-chevron-right'></i> Топливные баки</p>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="py-8 sm:py-10">
+  <div class="container-x grid lg:grid-cols-[260px_1fr] gap-8">
+
+    <!-- SIDEBAR -->
+    <aside class="shop-sidebar space-y-6">
+      <div>
+        <div class="shop-side-link"><a href="index.html#">Ремонт после ДТП</a></div>
+        <div class="shop-side-link"><a href="index.html#">Замена кабин</a></div>
+        <div class="shop-side-link"><a href="index.html#">Кабины / Кузова / Рамы</a></div>
+        <div class="shop-side-link"><a href="index.html#">Ремонт и усиление рам</a></div>
+        <div class="shop-side-link"><a href="index.html#">Тахограф / Глонасс</a></div>
+        <div class="shop-side-link"><a href="index.html#">Холодильное оборудование</a></div>
+        <div class="shop-side-link"><a href="index.html#">Автономные печки</a></div>
+        <div class="shop-side-link active"><a href="toplivnye-baki.html">Топливные баки</a></div>
+        <div class="shop-side-link"><a href="index.html#">Обтекатели</a></div>
+        <div class="shop-side-link"><a href="index.html#">Сигнализации</a></div>
+        <div class="shop-side-link"><a href="index.html#">Пневмоподвески</a></div>
+        <div class="shop-side-link"><a href="index.html#">ДУТ</a></div>
+        <div class="shop-side-link"><a href="index.html#">Прочее</a></div>
+      </div>
+
+      <p class="text-sm font-bold text-[color:var(--text-1)] uppercase tracking-wide">Фильтры товаров</p>
+
+      <details class="filter-block p-4" open>
+        <summary>Модель</summary>
+        <div class="mt-3">
+          <div class="flex items-center gap-2 mb-3">
+            <input type="text" placeholder="Найти" class="filter-vol-input flex-1 px-3 py-2">
+            <button class="text-orange"><i class='bx bx-search'></i></button>
+          </div>
+          <div class="filter-model-list">
+            <label class="filter-check"><input type="checkbox"> ГАЗель БИЗНЕС</label>
+            <label class="filter-check"><input type="checkbox"> ГАЗель БИЗНЕС фермер</label>
+            <label class="filter-check"><input type="checkbox" checked> ГАЗель НЕКСТ</label>
+            <label class="filter-check filter-model-extra hidden"><input type="checkbox"> Садко НЕКСТ</label>
+            <label class="filter-check filter-model-extra hidden"><input type="checkbox"> ГАЗ 33106 Валдай</label>
+            <label class="filter-check filter-model-extra hidden"><input type="checkbox"> ГАЗ 331063 Валдай фермер</label>
+            <label class="filter-check filter-model-extra hidden"><input type="checkbox"> ГАЗ 2705</label>
+            <label class="filter-check filter-model-extra hidden"><input type="checkbox"> ГАЗ 32212, автобус</label>
+            <label class="filter-check filter-model-extra hidden"><input type="checkbox"> ГАЗ 3309</label>
+          </div>
+          <button type="button" class="filter-more filter-toggle-btn" data-group="filter-model-extra">
+            <span class="filter-toggle-label">Показать всё (9)</span>
+            <i class='bx bx-chevron-down'></i>
+          </button>
+        </div>
+      </details>
+
+      <details class="filter-block p-4">
+        <summary>Материал бака</summary>
+        <div class="mt-3">
+          <label class="filter-check"><input type="checkbox"> Алюминиевый (AL)</label>
+          <label class="filter-check"><input type="checkbox"> Железный (Fe)</label>
+        </div>
+      </details>
+
+      <details class="filter-block p-4" open>
+        <summary>Объём топливного бака, л</summary>
+        <div class="mt-3">
+          <div class="flex items-center gap-2 mb-3">
+            <input type="text" placeholder="Поиск..." class="filter-vol-input flex-1 px-3 py-2">
+            <button class="text-orange"><i class='bx bx-search'></i></button>
+          </div>
+          <div class="filter-vol-list">
+            <label class="filter-check"><input type="checkbox"> 70</label>
+            <label class="filter-check"><input type="checkbox"> 140</label>
+            <label class="filter-check"><input type="checkbox"> 2 x 140</label>
+            <label class="filter-check filter-vol-extra hidden"><input type="checkbox"> 170</label>
+            <label class="filter-check filter-vol-extra hidden"><input type="checkbox"> 200</label>
+            <label class="filter-check filter-vol-extra hidden"><input type="checkbox"> 210</label>
+            <label class="filter-check filter-vol-extra hidden"><input type="checkbox"> 250</label>
+            <label class="filter-check filter-vol-extra hidden"><input type="checkbox"> 300</label>
+            <label class="filter-check filter-vol-extra hidden"><input type="checkbox"> 2 x 170</label>
+          </div>
+          <button type="button" class="filter-more filter-toggle-btn" data-group="filter-vol-extra">
+            <span class="filter-toggle-label">Показать всё (9)</span>
+            <i class='bx bx-chevron-down'></i>
+          </button>
+        </div>
+      </details>
+    </aside>
+
+    <!-- PRODUCT LIST -->
+    <div>
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div class="flex items-center gap-2 text-sm text-[color:var(--text-2)]">
+          <span>Сортировать по:</span>
+          <select class="sort-select px-3 py-2">
+            <option>Низкие позиции выше</option>
+            <option>Сначала дешевле</option>
+            <option>Сначала дороже</option>
+            <option>По популярности</option>
+          </select>
+          <select class="sort-select px-3 py-2">
+            <option>48</option>
+            <option>24</option>
+            <option>12</option>
+          </select>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="view-toggle-btn active"><i class='bx bx-grid-alt'></i></button>
+          <button class="view-toggle-btn"><i class='bx bx-list-ul'></i></button>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+
+        <a href="#" class="product-card">
+          <div class="product-img"><i class='bx bxs-truck'></i></div>
+          <div class="product-body">
+            <p class="product-title">AL-й топливный бак Бакор 70л на ГАЗель БИЗНЕС</p>
+            <p class="product-price-label">от</p>
+            <p class="product-price">32 000 ₽</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="product-img"><span class="product-badge">Просмотр</span><i class='bx bxs-truck'></i></div>
+          <div class="product-body">
+            <p class="product-title">Топливный бак на ГАЗель НЕКСТ (дополнительный на 140 л)</p>
+            <p class="product-price-label">от</p>
+            <p class="product-price">35 000 ₽</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="product-img"><i class='bx bxs-truck'></i></div>
+          <div class="product-body">
+            <p class="product-title">Топливный бак на 200л на Садко НЕКСТ</p>
+            <p class="product-price-label">от</p>
+            <p class="product-price">42 000 ₽</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="product-img"><i class='bx bxs-truck'></i></div>
+          <div class="product-body">
+            <p class="product-title">AL-й топливный бак Бакор на ГАЗель НЕКСТ (2 х 140л)</p>
+            <p class="product-price-label">от</p>
+            <p class="product-price">130 000 ₽</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="product-img"><i class='bx bxs-truck'></i></div>
+          <div class="product-body">
+            <p class="product-title">AL-й топливный бак Бакор 170л на ГАЗель НЕКСТ Фермер</p>
+            <p class="product-price-label">от</p>
+            <p class="product-price">45 000 ₽</p>
+          </div>
+        </a>
+
+        <a href="#" class="product-card">
+          <div class="product-img"><i class='bx bxs-truck'></i></div>
+          <div class="product-body">
+            <p class="product-title">Топливный бак на ГАЗон НЕКСТ (дополнительный на 250л)</p>
+            <p class="product-price-label">от</p>
+            <p class="product-price">52 000 ₽</p>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="flex items-center justify-center gap-2 mt-10">
+        <button class="pagination-btn"><i class='bx bx-chevron-left'></i></button>
+        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn">2</button>
+        <button class="pagination-btn">3</button>
+        <button class="pagination-btn"><i class='bx bx-chevron-right'></i></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacts" class="site-footer pt-14 pb-6">
+  <div class="container-x grid sm:grid-cols-3 gap-10 pb-10">
+    <div>
+      <h4>АИ Сервис</h4>
+      <ul class="space-y-2">
+        <li><a href="index.html#about">О компании</a></li>
+        <li><a href="index.html#contacts">Контактная информация</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Согласие на обработку персональных данных</a></li>
+        <li><a href="#">Карта сайта</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2"><i class='bx bx-map mt-0.5'></i> г. Нижний Новгород, ул. Вторчермета Лит5П</li>
+        <li class="flex items-start gap-2"><i class='bx bx-phone mt-0.5'></i> <a href="tel:88312671111">8&nbsp;(831)&nbsp;267-11-11</a> (звонок бесплатный)</li>
+        <li class="flex items-start gap-2"><i class='bx bx-envelope mt-0.5'></i> <a href="mailto:zakaz@ai-service52.ru">zakaz@ai-service52.ru</a></li>
+        <li class="flex items-start gap-2"><i class='bx bx-time-five mt-0.5'></i> Пн-Пт 9.00 - 18.00</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Мы в сети</h4>
+      <div class="flex items-center gap-3">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+      <button id="openCallback3" class="btn-orange px-5 py-2.5 text-sm mt-6">Заказать обратный звонок</button>
+    </div>
+  </div>
+  <div class="container-x border-t border-[color:var(--line)] pt-5 text-xs">
+    © 2017–2026 АИ Сервис. Все права защищены.
+  </div>
+</footer>
+
+<!-- CALLBACK MODAL -->
+<div id="callbackModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4" style="background:rgba(6,8,11,.72);">
+  <div class="join-cta w-full max-w-md p-7 relative">
+    <button id="closeCallback" class="absolute top-4 right-4 text-2xl text-[color:var(--text-3)] hover:text-orange"><i class='bx bx-x'></i></button>
+    <h3 class="text-xl font-bold mb-1">Заказать обратный звонок</h3>
+    <p class="text-[color:var(--text-2)] text-sm mb-5">Оставьте номер, и наш менеджер свяжется с вами в ближайшее время.</p>
+    <form id="callbackForm" class="space-y-4">
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Ваше имя</label>
+        <input type="text" name="name" class="search-box w-full px-4 py-2.5 text-sm" placeholder="Иван">
+      </div>
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Телефон *</label>
+        <input type="tel" name="phone" required class="search-box w-full px-4 py-2.5 text-sm" placeholder="+7 (___) ___-__-__">
+      </div>
+      <label class="flex items-center gap-2.5 text-xs text-[color:var(--text-3)] leading-snug">
+        <input type="checkbox" required class="gdpr-check">
+        <span>Я даю согласие на обработку моих персональных данных.</span>
+      </label>
+      <button type="submit" class="btn-orange w-full py-3 text-sm">Отправить</button>
+    </form>
+    <p id="callbackSuccess" class="hidden text-orange text-sm mt-4 text-center">Спасибо! Мы скоро с вами свяжемся.</p>
+  </div>
+</div>
+
+<button id="scrollTop"><i class='bx bx-chevron-up text-xl'></i></button>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  $(function () {
+    $('.filter-toggle-btn').on('click', function () {
+      var $btn = $(this);
+      var group = $btn.data('group');
+      var $items = $('.' + group);
+      var expanded = $btn.hasClass('is-open');
+      $items.toggleClass('hidden', expanded);
+      $btn.toggleClass('is-open', !expanded);
+      $btn.find('.filter-toggle-label').text(expanded ? $btn.data('label-show') : 'Свернуть');
+    }).each(function () {
+      $(this).data('label-show', $(this).find('.filter-toggle-label').text());
+    });
+  });
+</script>
+</body>
+</html>
