@@ -898,3 +898,72 @@ body{
   .related-card,.related-image img{transition:none;}
   .related-track{scroll-behavior:auto;}
 }
+
+/* Service reviews gallery */
+.reviews-page{
+  background:
+    radial-gradient(880px 360px at 84% 0%,rgba(247,163,37,.07),transparent 65%),
+    var(--bg-0);
+}
+.reviews-intro{
+  max-width:720px;
+  color:var(--text-2);
+  font-size:14px;
+  line-height:1.65;
+}
+.reviews-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.reviews-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.review-document{
+  position:relative;
+  display:block;
+  aspect-ratio:3/2;
+  overflow:hidden;
+  background:var(--bg-2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow:0 12px 28px rgba(0,0,0,.2);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.review-document img{
+  display:block;
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform .3s ease;
+}
+.review-document::after{
+  content:"\ea70";
+  position:absolute;right:12px;bottom:12px;
+  width:42px;height:42px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:10px;
+  background:rgba(12,15,20,.84);
+  color:var(--orange);
+  font-family:'boxicons' !important;
+  font-size:21px;
+  opacity:0;
+  transform:translateY(5px);
+  transition:.18s ease;
+}
+.review-document:hover,.review-document:focus-visible{
+  transform:translateY(-3px);
+  border-color:var(--orange);
+  box-shadow:0 16px 34px rgba(0,0,0,.34);
+  outline:none;
+}
+.review-document:hover img,.review-document:focus-visible img{transform:scale(1.025);}
+.review-document:hover::after,.review-document:focus-visible::after{opacity:1;transform:translateY(0);}
+.reviews-count{
+  display:inline-flex;align-items:center;gap:8px;
+  color:var(--text-3);
+  font-size:12px;font-weight:700;
+}
+.reviews-count i{color:var(--orange);font-size:17px;}
+@media (max-width:900px){.reviews-gallery{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:560px){
+  .reviews-gallery{grid-template-columns:1fr;gap:16px;}
+  .review-document::after{opacity:1;transform:none;}
+}
