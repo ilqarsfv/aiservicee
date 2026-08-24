@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Замена кабины ГАЗель НЕКСТ — АИ Сервис</title>
+<meta name="description" content="Полная замена кабины ГАЗель НЕКСТ в Нижнем Новгороде. Оригинальная кабина, профессиональный монтаж и гарантия на работы. Стоимость от 580 000 рублей.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          orange: { DEFAULT: '#f7a325' }
+        }
+      }
+    }
+  }
+</script>
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+<!-- TOP BAR -->
+<div class="topbar md:block hidden">
+  <div class="container-x flex flex-wrap items-center justify-between gap-2 py-2">
+    <p class="m-0">Цены на сайте носят ознакомительный характер. Точную стоимость уточняйте по телефону: <a href="tel:88312671111" class="font-semibold">8&nbsp;(831)&nbsp;267-11-11</a></p>
+    <div class="flex items-center gap-4">
+      <a href="#" class="hidden sm:inline-flex items-center gap-1"><i class='bx bx-map'></i> г. Нижний Новгород, ул. Вторчермета лит5П</a>
+      <div class="flex items-center gap-2">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container-x flex flex-wrap items-center gap-3 sm:gap-5 py-3 sm:py-4">
+    <a href="index.html" class="shrink-0">
+      <img src="assets/img/logo.png" alt="АИ Сервис" class="h-12 sm:h-10 lg:h-12 w-auto">
+    </a>
+
+    <div class="flex items-center gap-3 order-2 lg:order-3 ml-auto">
+      <div class="header-icon-pill">
+        <button type="button" class="hip-btn cm-tooltip" title="Отложенные товары"><i class='bx bx-heart'></i></button>
+        <button type="button" class="hip-btn cm-tooltip" title="Список сравнения"><i class='bx bx-bar-chart-alt-2'></i></button>
+      </div>
+      <div class="hidden lg:block text-right">
+        <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+        <a href="mailto:zakaz@ai-service52.ru" class="block text-xs text-[color:var(--text-3)]">zakaz@ai-service52.ru</a>
+      </div>
+      <button id="openCallback" class="btn-orange px-5 py-2.5 text-sm hidden lg:inline-flex">Заказать звонок</button>
+      <button id="burgerBtn" class="lg:hidden text-2xl"><i class='bx bx-menu'></i></button>
+    </div>
+
+    <div class="search-box flex items-center w-full lg:flex-1 lg:min-w-[180px] lg:w-auto px-4 py-2.5 order-2">
+      <input id="searchInput" type="text" placeholder="Найти услугу..." class="flex-1 text-sm">
+      <button class="text-orange text-lg"><i class='bx bx-search'></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN NAV -->
+<nav class="main-nav hidden lg:block">
+  <div class="container-x">
+    <div class="flex items-center gap-x-7 flex-wrap">
+      <a href="#" class="nav-link">Замена КАБИН</a>
+      <a href="#" class="nav-link">Ремонт после ДТП</a>
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-link">Кабины / Кузова / Рамы <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-link">Кабины</a>
+          <a href="#" class="nav-dropdown-link">Рамы</a>
+        </div>
+      </div>
+      <a href="#" class="nav-link">Ремонт и усиление РАМ</a>
+      <div class="nav-item-dropdown">
+        <a href="#categories" class="nav-link">Холодильное оборудование <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="#categories" class="nav-dropdown-link">Рефрижераторы</a>
+          <a href="#categories" class="nav-dropdown-link">Климатическое оборудование</a>
+        </div>
+      </div>
+      <a href="#" class="nav-link">Сигнализации</a>
+      <a href="#" class="nav-link">Пневмоподвески</a>
+      <a href="#" class="nav-link">Тахограф / Глонасс</a>
+      <a href="#" class="nav-link">Гидроборт</a>
+      <a href="./toplivnye-baki.html" class="nav-link">Топливные баки</a>
+      <a href="#" class="nav-link">Автономные печки</a>
+      <a href="#" class="nav-link">Обтекатели</a>
+      <a href="#" class="nav-link">ДУТ</a>
+      <a href="#" class="nav-link">ПРОЧЕЕ</a>
+      <a href="#" class="nav-link">Отзывы на сервис</a>
+      <a href="o-kompanii.html" class="nav-link">О компании</a>
+      <a href="kontakty.html" class="nav-link">Контактная информация</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="lg:hidden hidden">
+  <div class="px-[18px] py-4 border-b" style="border-color:var(--line);">
+    <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+    <a href="mailto:zakaz@ai-service52.ru" class="block text-xs mt-1" style="color:var(--text-3);">zakaz@ai-service52.ru</a>
+    <button id="openCallbackMobile" class="btn-orange w-full px-5 py-2.5 text-sm mt-3">Заказать звонок</button>
+  </div>
+  <a href="#">Замена КАБИН</a>
+  <a href="#">Ремонт после ДТП</a>
+  <a href="#categories">Холодильное оборудование</a>
+  <a href="#">Сигнализации</a>
+  <a href="#">Пневмоподвески</a>
+  <a href="#">Тахограф / Глонасс</a>
+  <a href="o-kompanii.html">О компании</a>
+  <a href="kontakty.html">Контактная информация</a>
+</div>
+
+<main id="categories" class="service-detail">
+  <section class="page-hero py-6">
+    <div class="container-x">
+      <p class="breadcrumb mb-3"><a href="index.html">Главная</a> <i class='bx bx-chevron-right'></i> <a href="#">Замена кузовов / кабин</a> <i class='bx bx-chevron-right'></i> Замена кабины ГАЗель НЕКСТ</p>
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">Замена кабины ГАЗель НЕКСТ</h1>
+    </div>
+  </section>
+
+  <section class="py-8 sm:py-12">
+    <div class="container-x grid lg:grid-cols-[minmax(0,1.45fr)_minmax(340px,.75fr)] gap-8 lg:gap-10 items-start">
+      <div>
+        <div class="service-gallery-main">
+          <img id="serviceMainImage" src="https://ai-service52.ru/images/detailed/23/DSC02680.jpg" alt="Замена кабины ГАЗель НЕКСТ — выполненная работа">
+          <button type="button" class="service-gallery-nav service-gallery-prev" aria-label="Предыдущее фото"><i class='bx bx-chevron-left'></i></button>
+          <button type="button" class="service-gallery-nav service-gallery-next" aria-label="Следующее фото"><i class='bx bx-chevron-right'></i></button>
+          <span class="service-gallery-count"><i class='bx bx-image'></i> <span id="serviceGalleryCount">1 / 9</span></span>
+        </div>
+        <div class="service-thumbs" aria-label="Фотографии выполненной работы">
+          <button class="service-thumb is-active" data-image="https://ai-service52.ru/images/detailed/23/DSC02680.jpg" aria-label="Показать фото 1"><img src="https://ai-service52.ru/images/detailed/23/DSC02680.jpg" alt=""></button>
+          <button class="service-thumb" data-image="https://ai-service52.ru/images/detailed/23/DSC02628.jpg" aria-label="Показать фото 2"><img src="https://ai-service52.ru/images/detailed/23/DSC02628.jpg" alt=""></button>
+          <button class="service-thumb" data-image="https://ai-service52.ru/images/detailed/23/DSC02677.jpg" aria-label="Показать фото 3"><img src="https://ai-service52.ru/images/detailed/23/DSC02677.jpg" alt=""></button>
+          <button class="service-thumb" data-image="https://ai-service52.ru/images/detailed/23/photo_2_2025-04-24_09-07-33.jpg" aria-label="Показать фото 4"><img src="https://ai-service52.ru/images/detailed/23/photo_2_2025-04-24_09-07-33.jpg" alt=""></button>
+          <button class="service-thumb" data-image="https://ai-service52.ru/images/detailed/23/DSC02696.jpg" aria-label="Показать фото 5"><img src="https://ai-service52.ru/images/detailed/23/DSC02696.jpg" alt=""></button>
+          <button class="service-thumb" data-image="https://ai-service52.ru/images/detailed/23/DSC02699.jpg" aria-label="Показать фото 6"><img src="https://ai-service52.ru/images/detailed/23/DSC02699.jpg" alt=""></button>
+          <button class="service-thumb" data-image="https://ai-service52.ru/images/detailed/23/photo_5_2025-04-24_09-07-33-редакт.jpg" aria-label="Показать фото 7"><img src="https://ai-service52.ru/images/detailed/23/photo_5_2025-04-24_09-07-33-редакт.jpg" alt=""></button>
+          <button class="service-thumb" data-image="https://ai-service52.ru/images/detailed/23/photo_7_2025-04-24_09-07-33-редакт.jpg" aria-label="Показать фото 8"><img src="https://ai-service52.ru/images/detailed/23/photo_7_2025-04-24_09-07-33-редакт.jpg" alt=""></button>
+          <button class="service-thumb" data-image="https://ai-service52.ru/images/detailed/23/photo_11_2025-04-24_09-07-33.jpg" aria-label="Показать фото 9"><img src="https://ai-service52.ru/images/detailed/23/photo_11_2025-04-24_09-07-33.jpg" alt=""></button>
+        </div>
+      </div>
+
+      <aside class="service-order-card">
+        <span class="service-kicker"><i class='bx bxs-check-shield'></i> Полная замена под ключ</span>
+        <h2 class="text-xl sm:text-2xl font-bold mt-4 leading-snug">Новая кабина — автомобиль снова готов к работе</h2>
+        <div class="service-price mt-6"><small class="block mb-1">Стоимость</small>от 580&nbsp;000 ₽</div>
+        <p class="text-sm text-[color:var(--text-3)] mt-2">Итоговая цена зависит от комплектации и состояния автомобиля.</p>
+        <ul class="service-quick-list space-y-3 mt-6 pt-6 border-t border-[color:var(--line)]">
+          <li><i class='bx bx-check-circle'></i><span>Оригинальная сертифицированная кабина</span></li>
+          <li><i class='bx bx-check-circle'></i><span>Демонтаж, монтаж и регулировка узлов</span></li>
+          <li><i class='bx bx-check-circle'></i><span>Гарантия на выполненные работы</span></li>
+          <li><i class='bx bx-check-circle'></i><span>Собственный склад запчастей</span></li>
+        </ul>
+        <button id="openCallback2" class="btn-orange w-full py-3.5 px-5 mt-7 inline-flex items-center justify-center gap-2">Рассчитать стоимость <i class='bx bx-right-arrow-alt text-xl'></i></button>
+        <a href="tel:88312671111" class="btn-outline w-full py-3 px-5 mt-3 inline-flex items-center justify-center gap-2 font-semibold text-sm"><i class='bx bx-phone text-lg'></i> 8 (831) 267-11-11</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="pb-12 sm:pb-16">
+    <div class="container-x">
+      <div class="service-info-card">
+        <h2 class="text-xl sm:text-2xl font-bold mb-4">Полная замена кабины на ГАЗель NEXT</h2>
+        <p>Выполним профессиональную замену повреждённой или изношенной кабины на новую. Подбираем полностью совместимую с вашей моделью оригинальную кабину, демонтируем старую, устанавливаем новую и регулируем все сопряжённые узлы.</p>
+        <p class="mt-3">В результате автомобиль получает аккуратный внешний вид, исправное рабочее место водителя и восстановленную целостность конструкции.</p>
+      </div>
+
+      <h2 class="text-xl sm:text-2xl font-bold mt-10 mb-6">Почему стоит обратиться к нам</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <article class="service-feature"><i class='bx bx-certification'></i><h3>Проверенные комплектующие</h3><p>Используем оригинальные и сертифицированные кабины с полной совместимостью.</p></article>
+        <article class="service-feature"><i class='bx bx-wrench'></i><h3>Профессиональный монтаж</h3><p>Работу выполняют опытные мастера с гарантией качества установки.</p></article>
+        <article class="service-feature"><i class='bx bx-package'></i><h3>Всё включено</h3><p>Берём на себя демонтаж, установку и точную регулировку узлов.</p></article>
+        <article class="service-feature"><i class='bx bx-time-five'></i><h3>Без долгого ожидания</h3><p>Собственный склад запчастей помогает сократить сроки ремонта.</p></article>
+      </div>
+
+      <h2 class="text-xl sm:text-2xl font-bold mt-10 mb-6">Преимущества новой кабины</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="about-check service-info-card"><i class='bx bx-check-circle'></i><span><strong class="text-[color:var(--text-1)]">Без коррозии и повреждений</strong><br>Кузов выглядит и служит как у нового автомобиля.</span></div>
+        <div class="about-check service-info-card"><i class='bx bx-check-circle'></i><span><strong class="text-[color:var(--text-1)]">Комфорт водителя</strong><br>Все механизмы и органы управления работают исправно.</span></div>
+        <div class="about-check service-info-card"><i class='bx bx-check-circle'></i><span><strong class="text-[color:var(--text-1)]">Повышенная безопасность</strong><br>Восстанавливается целостность конструкции автомобиля.</span></div>
+        <div class="about-check service-info-card"><i class='bx bx-check-circle'></i><span><strong class="text-[color:var(--text-1)]">Сохранение стоимости авто</strong><br>Машина хорошо выглядит и остаётся надёжной в работе.</span></div>
+      </div>
+
+      <div class="service-callout p-7 sm:p-9 mt-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="relative z-[1]">
+          <p class="service-kicker">Консультация специалиста</p>
+          <h2 class="text-xl sm:text-2xl font-bold mt-2">Уточните сроки и стоимость замены</h2>
+          <p class="text-sm text-[color:var(--text-2)] mt-2">Нижний Новгород, ул. Вторчермета, 1, лит. 5П</p>
+        </div>
+        <div class="relative z-[1] flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <a href="mailto:zakaz@ai-service52.ru" class="btn-outline px-5 py-3 text-sm font-semibold text-center">zakaz@ai-service52.ru</a>
+          <button class="btn-orange px-6 py-3 text-sm" onclick="document.getElementById('openCallback2').click()">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="contacts" class="site-footer pt-14 pb-6">
+  <div class="container-x grid sm:grid-cols-3 gap-10 pb-10">
+    <div>
+      <h4>АИ Сервис</h4>
+      <ul class="space-y-2">
+        <li><a href="o-kompanii.html">О компании</a></li>
+        <li><a href="kontakty.html">Контактная информация</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Согласие на обработку персональных данных</a></li>
+        <li><a href="#">Карта сайта</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2"><i class='bx bx-map mt-0.5'></i> г. Нижний Новгород, ул. Вторчермета Лит5П</li>
+        <li class="flex items-start gap-2"><i class='bx bx-phone mt-0.5'></i> <a href="tel:88312671111">8&nbsp;(831)&nbsp;267-11-11</a> (звонок бесплатный)</li>
+        <li class="flex items-start gap-2"><i class='bx bx-envelope mt-0.5'></i> <a href="mailto:zakaz@ai-service52.ru">zakaz@ai-service52.ru</a></li>
+        <li class="flex items-start gap-2"><i class='bx bx-time-five mt-0.5'></i> Пн-Пт 9.00 - 18.00</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Мы в сети</h4>
+      <div class="flex items-center gap-3">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+      <button id="openCallback3" class="btn-orange px-5 py-2.5 text-sm mt-6">Заказать обратный звонок</button>
+    </div>
+  </div>
+  <div class="container-x border-t border-[color:var(--line)] pt-5 text-xs">
+    © 2017–2026 АИ Сервис. Все права защищены.
+  </div>
+</footer>
+
+<!-- CALLBACK MODAL -->
+<div id="callbackModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4" style="background:rgba(6,8,11,.72);">
+  <div class="join-cta w-full max-w-md p-7 relative">
+    <button id="closeCallback" class="absolute top-4 right-4 text-2xl text-[color:var(--text-3)] hover:text-orange"><i class='bx bx-x'></i></button>
+    <h3 class="text-xl font-bold mb-1">Заказать обратный звонок</h3>
+    <p class="text-[color:var(--text-2)] text-sm mb-5">Оставьте номер, и наш менеджер свяжется с вами в ближайшее время.</p>
+    <form id="callbackForm" class="space-y-4">
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Ваше имя</label>
+        <input type="text" name="name" class="search-box w-full px-4 py-2.5 text-sm" placeholder="Иван">
+      </div>
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Телефон *</label>
+        <input type="tel" name="phone" required class="search-box w-full px-4 py-2.5 text-sm" placeholder="+7 (___) ___-__-__">
+      </div>
+      <label class="flex items-center gap-2.5 text-xs text-[color:var(--text-3)] leading-snug">
+        <input type="checkbox" required class="gdpr-check">
+        <span>Я даю согласие на обработку моих персональных данных.</span>
+      </label>
+      <button type="submit" class="btn-orange w-full py-3 text-sm">Отправить</button>
+    </form>
+    <p id="callbackSuccess" class="hidden text-orange text-sm mt-4 text-center">Спасибо! Мы скоро с вами свяжемся.</p>
+  </div>
+</div>
+
+<button id="scrollTop"><i class='bx bx-chevron-up text-xl'></i></button>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  $(function () {
+    var $thumbs = $('.service-thumb');
+    var current = 0;
+
+    function showImage(index) {
+      current = (index + $thumbs.length) % $thumbs.length;
+      var $thumb = $thumbs.eq(current);
+      $('#serviceMainImage').attr('src', $thumb.data('image'));
+      $thumbs.removeClass('is-active').attr('aria-current', 'false');
+      $thumb.addClass('is-active').attr('aria-current', 'true');
+      $('#serviceGalleryCount').text((current + 1) + ' / ' + $thumbs.length);
+    }
+
+    $thumbs.on('click', function () { showImage($thumbs.index(this)); });
+    $('.service-gallery-prev').on('click', function () { showImage(current - 1); });
+    $('.service-gallery-next').on('click', function () { showImage(current + 1); });
+    showImage(0);
+  });
+</script>
+</body>
+</html>
