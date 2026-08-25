@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог АИ Сервис</title>
+<meta name="description" content="Блог АИ Сервис">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          orange: { DEFAULT: '#f7a325' }
+        }
+      }
+    }
+  }
+</script>
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+<!-- TOP BAR -->
+<div class="topbar md:block hidden">
+  <div class="container-x flex flex-wrap items-center justify-between gap-2 py-2">
+    <p class="m-0">Цены на сайте носят ознакомительный характер. Точную стоимость уточняйте по телефону: <a href="tel:88312671111" class="font-semibold">8&nbsp;(831)&nbsp;267-11-11</a></p>
+    <div class="flex items-center gap-4">
+      <a href="#" class="hidden sm:inline-flex items-center gap-1"><i class='bx bx-map'></i> г. Нижний Новгород, ул. Вторчермета лит5П</a>
+      <div class="flex items-center gap-2">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container-x flex flex-wrap items-center gap-3 sm:gap-5 py-3 sm:py-4">
+    <a href="index.html" class="shrink-0">
+      <img src="assets/img/logo.png" alt="АИ Сервис" class="h-12 sm:h-10 lg:h-12 w-auto">
+    </a>
+
+    <div class="flex items-center gap-3 order-2 lg:order-3 ml-auto">
+      <div class="header-icon-pill">
+        <button type="button" class="hip-btn cm-tooltip" title="Отложенные товары"><i class='bx bx-heart'></i></button>
+        <button type="button" class="hip-btn cm-tooltip" title="Список сравнения"><i class='bx bx-bar-chart-alt-2'></i></button>
+      </div>
+      <div class="hidden lg:block text-right">
+        <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+        <a href="mailto:zakaz@ai-service52.ru" class="block text-xs text-[color:var(--text-3)]">zakaz@ai-service52.ru</a>
+      </div>
+      <button id="openCallback" class="btn-orange px-5 py-2.5 text-sm hidden lg:inline-flex">Заказать звонок</button>
+      <button id="burgerBtn" class="lg:hidden text-2xl"><i class='bx bx-menu'></i></button>
+    </div>
+
+    <div class="search-box flex items-center w-full lg:flex-1 lg:min-w-[180px] lg:w-auto px-4 py-2.5 order-2">
+      <input id="searchInput" type="text" placeholder="Найти услугу..." class="flex-1 text-sm">
+      <button class="text-orange text-lg"><i class='bx bx-search'></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN NAV -->
+<nav class="main-nav hidden lg:block">
+  <div class="container-x">
+    <div class="flex items-center gap-x-7 flex-wrap">
+      <a href="#" class="nav-link">Замена КАБИН</a>
+      <a href="#" class="nav-link">Ремонт после ДТП</a>
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-link">Кабины / Кузова / Рамы <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-dropdown-link">Кабины</a>
+          <a href="#" class="nav-dropdown-link">Рамы</a>
+        </div>
+      </div>
+      <a href="#" class="nav-link">Ремонт и усиление РАМ</a>
+      <div class="nav-item-dropdown">
+        <a href="#categories" class="nav-link">Холодильное оборудование <i class='bx bx-chevron-down nav-caret'></i></a>
+        <div class="nav-dropdown">
+          <a href="#categories" class="nav-dropdown-link">Рефрижераторы</a>
+          <a href="#categories" class="nav-dropdown-link">Климатическое оборудование</a>
+        </div>
+      </div>
+      <a href="#" class="nav-link">Сигнализации</a>
+      <a href="#" class="nav-link">Пневмоподвески</a>
+      <a href="#" class="nav-link">Тахограф / Глонасс</a>
+      <a href="#" class="nav-link">Гидроборт</a>
+      <a href="./toplivnye-baki.html" class="nav-link">Топливные баки</a>
+      <a href="#" class="nav-link">Автономные печки</a>
+      <a href="#" class="nav-link">Обтекатели</a>
+      <a href="#" class="nav-link">ДУТ</a>
+      <a href="#" class="nav-link">ПРОЧЕЕ</a>
+      <a href="otzyvy-na-servis.html" class="nav-link">Отзывы на сервис</a>
+      <a href="o-kompanii.html" class="nav-link">О компании</a>
+      <a href="kontakty.html" class="nav-link">Контактная информация</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="lg:hidden hidden">
+  <div class="px-[18px] py-4 border-b" style="border-color:var(--line);">
+    <a href="tel:88312671111" class="block font-bold text-[16px] leading-tight">8&nbsp;(831)&nbsp;267-11-11</a>
+    <a href="mailto:zakaz@ai-service52.ru" class="block text-xs mt-1" style="color:var(--text-3);">zakaz@ai-service52.ru</a>
+    <button id="openCallbackMobile" class="btn-orange w-full px-5 py-2.5 text-sm mt-3">Заказать звонок</button>
+  </div>
+  <a href="#">Замена КАБИН</a>
+  <a href="#">Ремонт после ДТП</a>
+  <a href="#categories">Холодильное оборудование</a>
+  <a href="#">Сигнализации</a>
+  <a href="#">Пневмоподвески</a>
+  <a href="#">Тахограф / Глонасс</a>
+  <a href="otzyvy-na-servis.html">Отзывы на сервис</a>
+  <a href="o-kompanii.html">О компании</a>
+  <a href="kontakty.html">Контактная информация</a>
+</div>
+
+<main id="categories" class="blog-page">
+  <section class="page-hero py-6">
+    <div class="container-x">
+      <p class="breadcrumb mb-3"><a href="index.html">Главная</a> <i class='bx bx-chevron-right'></i> Блог АИ Сервис</p>
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold">Блог АИ Сервис</h1>
+    </div>
+  </section>
+  <section class="py-8 sm:py-12">
+    <div class="container-x">
+      <div class="flex items-center justify-between gap-4 mb-7">
+        <span class="reviews-count"><i class='bx bx-news'></i> 10</span>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/skolko-stoit-skrytyy-uscherb-posle-dtp-ocenka-i-posledstviya/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55431.jpg" alt="оценка восстановительного ремонта автомобиля после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/skolko-stoit-skrytyy-uscherb-posle-dtp-ocenka-i-posledstviya/">Сколько стоит скрытый ущерб после ДТП? Оценка и последствия</a>
+            <p class="blog-card-excerpt">Преимущества ремонта в &quot;АИ Сервис&quot; Автосервис &quot;АИ Сервис&quot; в Нижнем Новгороде готов предложить вам профессиональные услуги по ремонту автомобилей и установке дополнительного оборудования. Наш подход к оценке и восстановительному ремонту автомобиля после ДТП отличается высоким качеством и индивидуальным подходом к каждому клиенту. Профессиональный...</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/skolko-stoit-skrytyy-uscherb-posle-dtp-ocenka-i-posledstviya/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/nevidimyy-vrag-kak-ocenit-skrytye-povrezhdeniya-avto-posle-dtp/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55432.jpg" alt="оценка ремонта автомобиля после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/nevidimyy-vrag-kak-ocenit-skrytye-povrezhdeniya-avto-posle-dtp/">Невидимый враг: как оценить скрытые повреждения авто после ДТП</a>
+            <p class="blog-card-excerpt">Оценка ремонта автомобиля после ДТП: Надежное решение с &quot;АИ Сервис&quot; Владельцы автомобилей в Нижнем Новгороде часто сталкиваются с необходимостью оценки ремонта автомобиля после ДТП . Это важный и ответственный шаг, от которого зависит безопасность и долговечность вашего транспортного средства. В автосервисе &quot;АИ Сервис&quot; мы предлагаем полную оценку и...</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/nevidimyy-vrag-kak-ocenit-skrytye-povrezhdeniya-avto-posle-dtp/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/skolko-stoit-otremontirovat-avto-posle-avarii-chestnyy-razbor-cen/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55435.jpg" alt="оценка стоимости ремонта автомобиля после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/skolko-stoit-otremontirovat-avto-posle-avarii-chestnyy-razbor-cen/">Сколько стоит отремонтировать авто после аварии: честный разбор цен</a>
+            <p class="blog-card-excerpt">Оценка стоимости ремонта автомобиля после ДТП: надежное решение в автосервисе АИ Сервис Когда речь идет о оценке стоимости ремонта автомобиля после ДТП , важность выбора надежного автосервиса сложно переоценить. В городе Нижний Новгород услуги высшего уровня предлагает автосервис АИ Сервис. Этот центр не только предоставит точную оценку повреждений,...</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/skolko-stoit-otremontirovat-avto-posle-avarii-chestnyy-razbor-cen/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/kak-vernut-avtomobilyu-pervozdannyy-vid-posle-dtp-etapy-remonta/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55438.jpg" alt="ремонт авто после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/kak-vernut-avtomobilyu-pervozdannyy-vid-posle-dtp-etapy-remonta/">Как вернуть автомобилю первозданный вид после ДТП: этапы ремонта</a>
+            <p class="blog-card-excerpt">Ремонт авто после ДТП в Нижнем Новгороде: Почему стоит выбрать АИ Сервис Каждому автовладельцу рано или поздно может понадобиться ремонт автомобиля, особенно после дорожно-транспортного происшествия. Когда речь идет о ремонте авто после ДТП , важно выбрать надежный автосервис с профессиональным подходом. АИ Сервис в Нижнем Новгороде предлагает полный...</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/kak-vernut-avtomobilyu-pervozdannyy-vid-posle-dtp-etapy-remonta/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/kak-izbezhat-skrytyh-defektov-posle-remonta-dtp/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55439.jpg" alt="ремонт после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/kak-izbezhat-skrytyh-defektov-posle-remonta-dtp/">Как избежать скрытых дефектов после ремонта ДТП</a>
+            <p class="blog-card-excerpt">Ремонт после ДТП в Нижнем Новгороде с автосервисом АИ Сервис Каждый автомобилист может столкнуться с неприятностью на дороге. Ремонт автомобиля после ДТП — это задача, требующая профессионального подхода и высокого уровня квалификации мастеров. В автосервисе АИ Сервис в Нижнем Новгороде вы найдете все необходимое для восстановительного ремонта на...</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/kak-izbezhat-skrytyh-defektov-posle-remonta-dtp/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/nezavisimaya-ocenka-remonta-posle-dtp-kak-poluchit-maksimum-ot-strahovki/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55440.jpg" alt="независимая оценка ремонта автомобиля после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/nezavisimaya-ocenka-remonta-posle-dtp-kak-poluchit-maksimum-ot-strahovki/">Независимая оценка ремонта после ДТП: как получить максимум от страховки</a>
+            <p class="blog-card-excerpt">Преимущества ремонта в автосервисе «АИ Сервис» в Нижнем Новгороде Автосервис «АИ Сервис» предлагает высококачественные услуги по ремонту автомобилей и установке дополнительного оборудования. Наш сервисный центр располагается в удобном месте: г. Нижний Новгород, ул. Вторчермета 1лит5П. Мы работаем в удобное для вас время: Пн-Пт с 9.00 до 18.00....</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/nezavisimaya-ocenka-remonta-posle-dtp-kak-poluchit-maksimum-ot-strahovki/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/kak-ocenit-uscherb-avto-posle-dtp-skrytye-posledstviya/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55443.jpg" alt="оценка ремонта авто после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/kak-ocenit-uscherb-avto-posle-dtp-skrytye-posledstviya/">Как оценить ущерб авто после ДТП: скрытые последствия</a>
+            <p class="blog-card-excerpt">Оценка ремонта авто после ДТП: как выбрать лучший автосервис в Нижнем Новгороде Каждый автолюбитель рано или поздно сталкивается с необходимостью ремонта транспортного средства после дорожного происшествия. В такие моменты крайне важно выбрать надежный автосервис, который сможет предоставить качественную оценку ремонта авто после ДТП и предложить...</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/kak-ocenit-uscherb-avto-posle-dtp-skrytye-posledstviya/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/kak-ocenit-skrytye-povrezhdeniya-avto-posle-dtp/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55676.jpg" alt="оценка ремонта после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/kak-ocenit-skrytye-povrezhdeniya-avto-posle-dtp/">Как оценить скрытые повреждения авто после ДТП</a>
+            <p class="blog-card-excerpt">Преимущества ремонта автомобилей в АИ Сервис Автосервис АИ Сервис в Нижнем Новгороде предлагает профессиональные услуги по ремонту автомобилей и установке дополнительного оборудования. Мы известны своим сервисным центром , удобным графиком работы и квалифицированными специалистами, готовыми помочь вам со всеми вопросами, связанными с автомобилем....</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/kak-ocenit-skrytye-povrezhdeniya-avto-posle-dtp/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/kak-vosstanovit-avtomobil-posle-dtp-polnoe-rukovodstvo-dlya-avtovladelcev/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55677.jpg" alt="ремонт автомобиля после дтп" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/kak-vosstanovit-avtomobil-posle-dtp-polnoe-rukovodstvo-dlya-avtovladelcev/">Как восстановить автомобиль после ДТП: полное руководство для автовладельцев</a>
+            <p class="blog-card-excerpt">Ремонт автомобиля после ДТП в АИ Сервис: Надежность и Качество в Нижнем Новгороде Каждый автовладелец может столкнуться с неприятной ситуацией на дороге — ДТП. В таких случаях важно найти надежный и проверенный автосервис для восстановления автомобиля. Автосервис &quot;АИ Сервис&quot; в Нижнем Новгороде предлагает качественный ремонт автомобиля после ДТП и...</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/kak-vosstanovit-avtomobil-posle-dtp-polnoe-rukovodstvo-dlya-avtovladelcev/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a class="blog-card-image" href="https://ai-service52.ru/blog-ru/kto-dolzhen-platit-za-kartu-voditelya-tahografa/">
+            <img src="https://ai-service52.ru/images/thumbnails/380/217/blog/24/img-55795.jpg" alt="кто должен оплачивать карту водителя для тахографа работник или работодатель" loading="lazy">
+            <span class="blog-card-date">25/08/2026</span>
+          </a>
+          <div class="blog-card-body">
+            <a class="blog-card-title" href="https://ai-service52.ru/blog-ru/kto-dolzhen-platit-za-kartu-voditelya-tahografa/">Кто должен платить за карту водителя тахографа?</a>
+            <p class="blog-card-excerpt">Ремонт автомобилей и установка дополнительного оборудования в автосервисе АИ Сервис, Нижний Новгород Ремонт автомобиля — это не только способ поддерживать транспортное средство в рабочем состоянии, но и важный элемент безопасной эксплуатации. Когда дело касается выбора автосервиса, владельцы автомобилей в Нижнем Новгороде предпочитают АИ Сервис . Это...</p>
+            <a class="blog-card-more" href="https://ai-service52.ru/blog-ru/kto-dolzhen-platit-za-kartu-voditelya-tahografa/">Читать дальше <i class='bx bx-right-arrow-alt'></i></a>
+          </div>
+        </article>
+      </div>
+      <nav class="blog-pagination mt-10" aria-label="Pagination">
+        <span class="pagination-btn active" aria-current="page">1</span>
+        <a class="pagination-btn" href="https://ai-service52.ru/blog-ru/page-2/">2</a>
+        <a class="pagination-btn" href="https://ai-service52.ru/blog-ru/page-3/">3</a>
+        <a class="pagination-btn" href="https://ai-service52.ru/blog-ru/page-4/">4</a>
+        <a class="pagination-btn" href="https://ai-service52.ru/blog-ru/page-5/">5</a>
+        <a class="pagination-btn" href="https://ai-service52.ru/blog-ru/page-6/">6</a>
+        <a class="pagination-btn" href="https://ai-service52.ru/blog-ru/page-7/">7</a>
+        <a class="pagination-btn" href="https://ai-service52.ru/blog-ru/page-8/">8</a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="contacts" class="site-footer pt-14 pb-6">
+  <div class="container-x grid sm:grid-cols-3 gap-10 pb-10">
+    <div>
+      <h4>АИ Сервис</h4>
+      <ul class="space-y-2">
+        <li><a href="o-kompanii.html">О компании</a></li>
+        <li><a href="kontakty.html">Контактная информация</a></li>
+        <li><a href="blog-ru.html">Блог</a></li>
+        <li><a href="politika-konfidencialnosti.html">Политика конфиденциальности</a></li>
+        <li><a href="soglasie-na-obrabotku-personalnyh-dannyh.html">Согласие на обработку персональных данных</a></li>
+        <li><a href="#">Карта сайта</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul class="space-y-2">
+        <li class="flex items-start gap-2"><i class='bx bx-map mt-0.5'></i> г. Нижний Новгород, ул. Вторчермета Лит5П</li>
+        <li class="flex items-start gap-2"><i class='bx bx-phone mt-0.5'></i> <a href="tel:88312671111">8&nbsp;(831)&nbsp;267-11-11</a> (звонок бесплатный)</li>
+        <li class="flex items-start gap-2"><i class='bx bx-envelope mt-0.5'></i> <a href="mailto:zakaz@ai-service52.ru">zakaz@ai-service52.ru</a></li>
+        <li class="flex items-start gap-2"><i class='bx bx-time-five mt-0.5'></i> Пн-Пт 9.00 - 18.00</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Мы в сети</h4>
+      <div class="flex items-center gap-3">
+        <a href="https://m.vk.com/aiservicee?from=profile" target="_blank" class="social-ico"><i class='bx bxl-vk'></i></a>
+        <a href="https://www.youtube.com/c/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_blank" class="social-ico"><i class='bx bxl-youtube'></i></a>
+        <a href="https://t.me/gazel_gazon" target="_blank" class="social-ico"><i class='bx bxl-telegram'></i></a>
+      </div>
+      <button id="openCallback3" class="btn-orange px-5 py-2.5 text-sm mt-6">Заказать обратный звонок</button>
+    </div>
+  </div>
+  <div class="container-x border-t border-[color:var(--line)] pt-5 text-xs">
+    © 2017–2026 АИ Сервис. Все права защищены.
+  </div>
+</footer>
+
+<!-- CALLBACK MODAL -->
+<div id="callbackModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4" style="background:rgba(6,8,11,.72);">
+  <div class="join-cta w-full max-w-md p-7 relative">
+    <button id="closeCallback" class="absolute top-4 right-4 text-2xl text-[color:var(--text-3)] hover:text-orange"><i class='bx bx-x'></i></button>
+    <h3 class="text-xl font-bold mb-1">Заказать обратный звонок</h3>
+    <p class="text-[color:var(--text-2)] text-sm mb-5">Оставьте номер, и наш менеджер свяжется с вами в ближайшее время.</p>
+    <form id="callbackForm" class="space-y-4">
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Ваше имя</label>
+        <input type="text" name="name" class="search-box w-full px-4 py-2.5 text-sm" placeholder="Иван">
+      </div>
+      <div>
+        <label class="text-xs text-[color:var(--text-3)] block mb-1">Телефон *</label>
+        <input type="tel" name="phone" required class="search-box w-full px-4 py-2.5 text-sm" placeholder="+7 (___) ___-__-__">
+      </div>
+      <label class="flex items-center gap-2.5 text-xs text-[color:var(--text-3)] leading-snug">
+        <input type="checkbox" required class="gdpr-check">
+        <span>Я даю согласие на обработку моих персональных данных.</span>
+      </label>
+      <button type="submit" class="btn-orange w-full py-3 text-sm">Отправить</button>
+    </form>
+    <p id="callbackSuccess" class="hidden text-orange text-sm mt-4 text-center">Спасибо! Мы скоро с вами свяжемся.</p>
+  </div>
+</div>
+
+<button id="scrollTop"><i class='bx bx-chevron-up text-xl'></i></button>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
