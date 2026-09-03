@@ -330,6 +330,10 @@ body{
   border:1px solid var(--line);
   border-radius:16px;
 }
+.join-cta .social-ico{
+  width:44px;
+  height:44px;
+}
 
 /* Footer */
 .site-footer{
