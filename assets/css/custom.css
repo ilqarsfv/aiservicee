@@ -139,6 +139,10 @@ body{
   transition:opacity .18s ease, transform .18s ease, visibility .18s ease;
   z-index:40;
 }
+.nav-dropdown::before{
+  content:"";
+  position:absolute;top:-6px;left:0;right:0;height:6px;
+}
 .nav-item-dropdown:hover .nav-dropdown{opacity:1;visibility:visible;transform:translateY(0);}
 .nav-dropdown-link{
   display:block;
@@ -204,7 +208,7 @@ body{
 }
 .tg-title{
   position:relative;z-index:1;
-  font-size:26px;
+  font-size:46px;
   font-weight:900;
   text-transform:uppercase;
   letter-spacing:.4px;
@@ -253,7 +257,12 @@ body{
   padding:14px;
   transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
-.cat-card:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 14px 30px rgba(0,0,0,.35);}
+.cat-card:hover {
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;
+  transform: scale(1.04);
+  border-color: #a7afbc;
+}
+/* .cat-card:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 14px 30px rgba(0,0,0,.35);} */
 .cat-card img{
   width:100%;height:auto;
   object-fit:contain;
