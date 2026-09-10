@@ -363,10 +363,11 @@ body {
     box-shadow 0.2s ease;
 }
 .cat-card:hover {
-  box-shadow: 0 0 28px 6px #F75C0004, #F75C00 0px 8px 24px;
+  /* box-shadow: 0 0 28px 6px #F75C0004, #F75C00 0px 8px 24px; */
   /* box-shadow: 0 0 28px 6px rgba(247, 163, 37, 0.45), rgba(255, 255, 255, 0.2) 0px 8px 24px; */
-  transform: scale(1.04);
+  transform: translateY(-4px);
   border-color: var(--orange);
+  border-width: 2px;
 }
 .cat-card:active {
   box-shadow: none;
