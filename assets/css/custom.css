@@ -345,11 +345,14 @@ body {
 .tg-qr p {
   color: #0c0f14;
 }
-
+.cat-card:nth-of-type(1) img {
+  filter: invert(1);
+}
 /* Category grid */
 .cat-card {
   position: relative;
-  background: #fff;
+  /* background: #fff; */
+  background: #171c24;
   border: 1px solid var(--line);
   border-radius: 14px;
   overflow: hidden;
